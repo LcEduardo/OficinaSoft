@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depoimentos</title>
+    <style>
+.depoimentos {
+            padding: 3rem 1rem;
+        }
+        
+        .depoimentos .titulo {
+            font-size: 1.875rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .video-grid-container {
+            max-width: 56rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .video-container {
+            aspect-ratio: 16/9;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .iframe-depoimentos {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        @media (min-width: 768px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="depoimentos">
+        <h2 class="titulo">Depoimentos</h2>
+
+        <div class="video-grid-container">
+            <div class="video-grid">
+                <div class="video-container">
+                    <iframe
+                        class="iframe-depoimentos"
+                        src="https://www.youtube.com/embed/SEU_VIDEO_1"
+                        allowfullscreen
+                        title="Depoimento 1"
+                    ></iframe>
+                </div>
+
+                <div class="video-container">
+                    <iframe
+                        class="iframe-depoimentos"
+                        src="https://www.youtube.com/embed/SEU_VIDEO_2"
+                        allowfullscreen
+                        title="Depoimento 2"
+                    ></iframe>
+                </div>
+
+                <div class="video-container">
+                    <iframe
+                        class="iframe-depoimentos"
+                        src="https://www.youtube.com/embed/SEU_VIDEO_3"
+                        allowfullscreen
+                        title="Depoimento 3"
+                    ></iframe>
+                </div>
+
+                <div class="video-container">
+                    <iframe
+                        class="iframe-depoimentos"
+                        src="https://www.youtube.com/embed/SEU_VIDEO_4"
+                        allowfullscreen
+                        title="Depoimento 4"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

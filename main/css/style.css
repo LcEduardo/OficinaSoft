@@ -1,0 +1,556 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titulo {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.titulo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #3498db;
+}
+
+.second-title {
+    text-align: center;
+    margin: 40px 0px 40px 0px;
+    color: #2c3e50;
+}
+
+/*--------- Botão clique ---------*/
+.click {
+    margin: 20px 0px 10px 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #1078D5; /* Verde - pode mudar para a cor que preferir */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.click:hover {
+    background-color: #1078D5; /* Tom mais escuro para o hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.click:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+/*--------- Botão cadastrar ---------*/
+.cadastrar {
+    margin: 0px 0px 10px 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #1078D5; /* Verde - pode mudar para a cor que preferir */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.cadastrar:hover {
+  background-color: #1078D5; /* Tom mais escuro para o hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.cadastrar:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+/*--------- Header ---------*/
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+
+/*--------- Seção Intro ---------*/
+section {
+    margin: 50px auto; 
+    padding: 0 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+#intro-descr > h1 {
+    margin: 0 0 20px 0;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    line-height: 1.2;
+    color: #001F5C;
+}
+
+#intro-descr > p {
+    margin: 0 0 15px 0;
+    font-size: clamp(1rem, 2.5vw, 1.1rem); /* Texto responsivo */
+    line-height: 1.6;
+    max-width: 600px; 
+    color: #333;
+}
+
+#intro iframe {
+    flex: 1;
+    min-width: 300px;
+    max-width: 560px;
+    height: 315px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*--------- Por que nos escolher? ---------*/
+#diferencial {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#diferencial .subtitulo {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+#container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-topc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-topc:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: #4a6bff;
+    margin-bottom: 1.5rem;
+}
+
+.card-topic h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.card-topic p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/*--------- Depoimentos ---------*/
+.depoimentos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.video-depoimentos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.depoimento-video {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+.video-container iframe,
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+}
+
+/*--------- Diferenciais ---------*/
+#container-diferenciais {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.cards-diferenciais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-diferencial {
+    display: flex;           
+    width: 100%;    
+    height: 400px;  
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-diferencial:hover {
+    transform: translateY(-5px);
+}
+
+.card-conteudo {
+    flex: 1;               
+    padding: 30px 20px;
+}
+
+.card-conteudo h3 {
+    margin-top: 20px;
+    color: #001F5C;
+    padding: 15px ;
+    font-size: 1.3rem;
+}
+
+.card-conteudo p {
+    margin-top: 20px;
+    color: #666;
+    line-height: 1.5;
+    padding: 15px 10px
+}
+
+.card-imagem {
+    flex: 2;               
+    overflow: hidden;  
+
+}
+
+.card-imagem > img {
+    width: 100%;         
+    height: 100%;          
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+/* Layout mobile (ativado via JS) */
+.card-diferencial.mobile-layout {
+    flex-direction: column;
+    height: auto !important; 
+}
+
+.card-diferencial.mobile-layout .card-imagem {
+    height: 200px; 
+}
+
+.card-diferencial.mobile-layout .card-conteudo {
+    padding: 15px; 
+}
+
+/*--------- Perguntas ---------*/
+#perguntas-frequentes {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.faq-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    
+}
+
+details {
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+details:last-child {
+    border-bottom: none;
+}
+
+details[open] {
+    background: #f9f9f9;
+}
+
+summary {
+    display: block; 
+    padding: 32px 55px; 
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+summary:hover {
+    background: #f1f1f1;
+}
+
+/* Seta do Summary */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #3498db;
+    transition: all 0.3s ease;
+}
+
+details[open] summary::after {
+    content: '-';
+    color: #e74c3c;
+}
+
+.faq-content {
+    padding: 0 20px 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.faq-content p {
+    margin-bottom: 10px;
+}
+
+/*--------- Planos ---------*/
+.nossos-planos {
+    background-color: #f8f9fa; 
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#planos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plano {
+    background: white;
+    border-radius: 8px;
+    margin: 0px 40px;
+    padding: 30px;
+    width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.plano-pro {
+    border: 2px solid #007bff; 
+    transform: scale(1.05); 
+}
+
+.plano h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.plano ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.plano li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.plano li:before {
+    content: "•";
+    color: #007bff;
+    position: absolute;
+    left: 0;
+}
+
+.plano button {
+    background-color: #1078D5;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.plano button:hover {
+    background-color: #0056b3;
+}
+
+/*--------- Footer ---------*/
+.bg-custom-dark {
+    background-color: #2c3e50;
+}
+
+.bg-custom-light {
+    color: #3498db;
+}
+
+.text-custom-highlight {
+    color: white;
+}
+
+.text-custom-muted {
+    color: #bdc3c7;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.footer-description {
+    line-height: 1.6;
+}
+
+.social-links i {
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover i {
+    color: white !important;
+    transform: translateY(-3px);
+}
+
+.footer-title {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: white;
+}
+
+.footer-links li a {
+    transition: all 0.3s ease;
+}
+
+.footer-links li a:hover {
+    padding-left: 5px;
+}

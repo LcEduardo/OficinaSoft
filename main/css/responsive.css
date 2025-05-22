@@ -1,0 +1,152 @@
+/*--------- Responsividade Header ---------*/
+@media (max-width: 768px) {
+.menu-toggle {
+    display: block;
+}
+
+nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.4s ease-out;
+}
+
+nav.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+nav ul {
+    flex-direction: column;
+}
+
+nav ul li {
+    margin: 0.5rem 0;
+}
+}
+
+/*--------- Responsividade Introdução ---------*/
+@media (max-width: 768px) {
+    #intro {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    #intro-descr {
+        text-align: center;
+    }
+    
+    #intro iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        margin: 20px;
+    }
+    
+    #intro-descr > h1 {
+        font-size: 2rem;
+    }
+    
+    #intro-descr > p {
+        font-size: 1rem;
+    }
+    
+    #intro iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 400px) {
+    #intro iframe {
+        height: 200px;
+    }
+}
+
+/*--------- Por que nos escolher? ---------*/ 
+@media (max-width: 992px) {
+    #container-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #diferencial .titulo {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #diferencial {
+        padding: 3rem 1.5rem;
+    }
+    
+    #diferencial .titulo {
+        font-size: 2rem;
+    }
+    
+    #diferencial .subtitulo {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #container-cards {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    .card-topc {
+        padding: 1.5rem;
+    }
+    
+    #diferencial .titulo {
+        font-size: 1.8rem;
+    }
+    
+    #diferencial .subtitulo {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    #diferencial {
+        padding: 2rem 1rem;
+    }
+    
+    .card-icon {
+        font-size: 2rem;
+    }
+    
+    .card-diferencial h3 {
+        font-size: 1.2rem;
+    }
+    
+    .card-diferencial p {
+        font-size: 0.9rem;
+    }
+}
+
+/*--------- Depoimentos ---------*/ 
+
+
+/*--------- Diferenciais ---------*/ 
+
+/*--------- Footer ---------*/ 
+
+@media (min-width: 768px) {
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (min-width: 1024px) {
+    .lg\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
