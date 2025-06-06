@@ -28,6 +28,13 @@ nav ul li {
 }
 }
 
+/*--------- Responsividade Logo  ---------*/
+@media (max-width: 768px) {
+    #logo-soz {
+        text-align: center;
+    }
+}
+
 /*--------- Responsividade Introdução ---------*/
 @media (max-width: 768px) {
     #intro {
